@@ -1,7 +1,7 @@
 "use client"
 
 import VideoBG from "../components/videoBg";
-import {Menu, Transition} from '@headlessui/react'
+import 'material-symbols';
 import Link from "next/link";
 
 export default function HomePage() {
@@ -11,18 +11,10 @@ export default function HomePage() {
             <Navbar/>
             <div className={"absolute top-0 prose h-screen min-w-full " +
                 "flex flex-col justify-center mx-auto px-8"}>
-                <p className={"font-pt text-3xl text-base-100 lg:text-xl ease-in-out"}>Our Moto,</p>
-                <h1 className={"font-fira text-7xl text-neutral leading-normal lg:text-6xl w-4/5 lg:w-3/5 xl:w-2/4 ease-in-out"}>Sparking
-                    your success with reliable, expert electrical service.</h1>
-                <div className="flex gap-x-10 font-pt">
-                    <button className={"btn btn-primary btn-lg tracking-widest"}>
-                        Contact
-                    </button>
-                    <button className={"btn btn-secondary btn-outline btn-square btn-lg"}>
-                        Co
-                    </button>
-                </div>
-
+                <p className={"font-pt text-3xl text-base-100 lg:text-xl"}>Our Moto,</p>
+                <h1 className={"font-fira text-7xl text-neutral lg:text-6xl w-4/5 lg:w-3/5 xl:w-2/4"}>Sparking
+                    your success with reliable, expert electrical service.
+                </h1>
             </div>
         </VideoBG>
     );

@@ -7,9 +7,12 @@ module.exports = {
     ],
     theme: {
         fontFamily: {
-            'fira': ["Fira Sans", "sans-serif"],
-            "pt": ["PT Serif", "serif"]
+            'mono': ["JetBrains Mono", "monospace"],
+            "sans": ["Poppins", "sans-serif"]
         },
+        backgroundImage: {
+            'line-pattern': `url('/svg/pattern.svg')`
+        }
     },
     plugins: [require("daisyui"), require('@tailwindcss/typography')],
     daisyui: {
@@ -17,23 +20,23 @@ module.exports = {
             {
                 mytheme: {
 
-                    "primary": "#FF9F1C",
+                    "primary": "#21E6C1",
 
-                    "secondary": "#2EC4B6",
+                    "secondary": "#278EA5",
 
-                    "accent": "#FFBF69",
+                    "accent": "#7045AF",
 
-                    "neutral": "#FFFFFF",
+                    "neutral": "#1F4287",
 
-                    "base-100": "#CBF3F0",
+                    "base-100": "#071E3D",
 
-                    "info": "#00b4d8",
+                    "info": "#3282B8",
 
-                    "success": "#2b9348",
+                    "success": "#03C4A1",
 
-                    "warning": "#ffff3f",
+                    "warning": "#FFD717",
 
-                    "error": "#fe5f55",
+                    "error": "#7B113A",
                 },
             },
         ],

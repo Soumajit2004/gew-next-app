@@ -1,6 +1,6 @@
 export default function Hero() {
     return (
-        <section className={"h-screen"} id={"hero"}>
+        <section className={"h-[90vh] snap-start"} id={"hero"}>
             <div className={"mx-auto min-h-full flex items-center container"}>
                 <div className={"prose min-w-full h-auto"}>
                     <h1 className={"text-5xl w-4/5 lg:w-3/5 xl:w-2/4 font-sans text-white"}>
@@ -19,7 +19,7 @@ export default function Hero() {
                         today to schedule an appointment and let us be your hero in all of your electrical needs.
                     </p>
                     <div className={"flex gap-x-5"}>
-                        <button className={"btn btn-lg  btn-primary"}>
+                        <button className={"btn btn-lg btn-primary"}>
                             Get in touch
                         </button>
                         <button className={"btn btn-lg btn-outline btn-ghost"}>

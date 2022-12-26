@@ -12,6 +12,12 @@ module.exports = {
         },
         backgroundImage: {
             'line-pattern': `url('/svg/pattern.svg')`
+        },
+        extend:{
+            dropShadow:{
+                'xl-primary': 'drop-shadow(0 20px 13px #7045AF)',
+                '2xl-primary': 'drop-shadow(0 25px 15px #7045AF)'
+            }
         }
     },
     plugins: [require("daisyui"), require('@tailwindcss/typography')],

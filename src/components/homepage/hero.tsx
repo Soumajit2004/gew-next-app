@@ -2,13 +2,13 @@ export default function Hero() {
     return (
         <section className={"h-[90vh] snap-start"} id={"hero"}>
             <div className={"mx-auto min-h-full flex items-center container"}>
-                <div className={"prose min-w-full h-auto"}>
-                    <h1 className={"text-5xl w-4/5 lg:w-3/5 xl:w-2/4 font-sans text-white"}>
+                <div className={"prose-sm md:prose lg:prose-lg min-w-full h-auto"}>
+                    <h1 className={"font-sans text-white"}>
                         Expert Services,<br/>
                         guarantied results &<br/>
                         <span className={"text-primary"}>complete peace of mind.</span>
                     </h1>
-                    <p className={"text-sm lg:w-2/5 font-mono w-1/2"}>
+                    <p className={"hidden md:block font-mono w-3/5"}>
                         we are dedicated to providing top-notch electrical services to our customers. Our team of
                         skilled electricians has years of experience and is fully licensed and insured. We pride
                         ourselves
@@ -19,10 +19,10 @@ export default function Hero() {
                         today to schedule an appointment and let us be your hero in all of your electrical needs.
                     </p>
                     <div className={"flex gap-x-5"}>
-                        <button className={"btn btn-lg btn-primary"}>
+                        <button className={"btn btn-sm md:btn-md lg:btn-lg btn-primary"}>
                             Get in touch
                         </button>
-                        <button className={"btn btn-lg btn-outline btn-ghost"}>
+                        <button className={"btn btn-sm md:btn-md lg:btn-lg btn-outline btn-ghost"}>
                             Payments
                         </button>
                     </div>

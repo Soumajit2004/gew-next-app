@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Hero() {
     return (
         <section className={"h-[90vh] snap-start"} id={"hero"}>
@@ -18,13 +20,13 @@ export default function Hero() {
                         sure your home or business is safe and properly wired, so you can have peace of mind. Contact us
                         today to schedule an appointment and let us be your hero in all of your electrical needs.
                     </p>
-                    <div className={"flex gap-x-5"}>
-                        <button className={"btn btn-sm md:btn-md lg:btn-lg btn-primary"}>
+                    <div className={"flex gap-x-5 not-prose"}>
+                        <Link className={"btn btn-sm md:btn-md lg:btn-lg btn-primary"} href={"/contact"}>
                             Get in touch
-                        </button>
-                        <button className={"btn btn-sm md:btn-md lg:btn-lg btn-outline btn-ghost"}>
+                        </Link>
+                        <Link className={"btn btn-sm md:btn-md lg:btn-lg btn-outline btn-ghost"} href={"/payments"}>
                             Payments
-                        </button>
+                        </Link>
                     </div>
 
                 </div>

@@ -1,3 +1,5 @@
+"use client"
+
 import {Menu} from "@headlessui/react";
 import Link from "next/link";
 
@@ -71,7 +73,7 @@ function NavLinksMobile() {
                             {
                                 links.map(({href, label}, index) => {
                                     return (
-                                        <Menu.Item>
+                                        <Menu.Item key={index}>
                                                 <Link href={href} className={`btn rounded-none w-screen 
                                                 ${(links.length - 1) == index ? "text-white" : ""}`}>
                                                     {label}

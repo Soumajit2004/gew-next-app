@@ -4,9 +4,9 @@ import {Menu} from "@headlessui/react";
 import Link from "next/link";
 
 const links = [
-    {href: '/contact', label: 'Contact'},
-    {href: '/services', label: 'Services'},
-    {href: '/dashboard', label: 'Dashboard'},
+    {href: '/contact', label: 'Contact', prefetch: false},
+    {href: '/services', label: 'Services', prefetch: false},
+    {href: '/login', label: 'Dashboard', prefetch: true},
 ]
 
 export default function Navbar() {
@@ -26,33 +26,18 @@ export default function Navbar() {
 function NavLinksDesktop() {
     return <div className="hidden md:block opacity-100" id="navbar-default">
         <ul className="menu menu-horizontal">
-            <li tabIndex={0}>
-                <button
-                    className={"btn btn-xs sm:btn-sm md:btn-md lg:btn-lg btn-ghost no-animation rounded-none"}>
-                    <Link href={"/contact"}>
-                        Contact
-                    </Link>
-                </button>
-            </li>
-            <li>
-                <button
-                    className={"btn btn-xs sm:btn-sm md:btn-md lg:btn-lg btn-ghost no-animation rounded-none"}>
-                    <Link href={"#contact"}>
-                        Services
-                    </Link>
-                </button>
-            </li>
-            <li>
-                <button
-                    className={"btn btn-xs sm:btn-sm md:btn-md lg:btn-lg btn-ghost no-animation rounded-none text-white"}>
-                    <Link href={"/dashboard"}>
-                        Dashboard
-                    </Link>
-                    <span className="material-symbols-rounded">
-                        double_arrow
-                    </span>
-                </button>
-            </li>
+            {links.map(({href, label, prefetch}, index) => {
+                return (
+                    <li key={index}>
+                        <Link className={"btn btn-xs sm:btn-sm md:btn-md lg:btn-lg btn-ghost no-animation rounded-none"}
+                              href={href}>
+                            {label}
+                            {(links.length - 1) == index ?
+                                <span className="material-symbols-rounded">double_arrow</span> : ""}
+                        </Link>
+                    </li>
+                )
+            })}
         </ul>
     </div>;
 }
@@ -71,13 +56,14 @@ function NavLinksMobile() {
                         </Menu.Button>
                         <Menu.Items className={"flex flex-col mt-16 absolute top-0 right-0"}>
                             {
-                                links.map(({href, label}, index) => {
+                                links.map(({href, label, prefetch}, index) => {
                                     return (
                                         <Menu.Item key={index}>
-                                                <Link href={href} className={`btn rounded-none w-screen 
+                                            <Link href={href}
+                                                  className={`btn rounded-none w-screen 
                                                 ${(links.length - 1) == index ? "text-white" : ""}`}>
-                                                    {label}
-                                                </Link>
+                                                {label}
+                                            </Link>
                                         </Menu.Item>
                                     )
                                 })

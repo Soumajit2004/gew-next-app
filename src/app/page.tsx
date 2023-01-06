@@ -5,7 +5,7 @@ import Contact from "./contact";
 
 export default function Homepage() {
     return (
-        <div className={"bg-line-pattern bg-repeat-y bg-cover"}>
+        <div className={"bg-spaced-dot-pattern bg-repeat-y bg-cover"}>
             <Navbar/>
             <main>
                 <Hero/>
